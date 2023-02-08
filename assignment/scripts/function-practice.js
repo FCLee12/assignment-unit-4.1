@@ -127,9 +127,30 @@ console.log( sumAll( otherArrayOfNumbers ));
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
+function positivesOnly( array ) {
+  let newArray = [];
+  for( item of array ) {
+    if( item > 0 ) {
+      newArray.push(item);
+    }
+  }
+  return newArray;
+}
+let exampleArray = [2, 3, 9, 'apple', false, 4, 5, 6, -3, -2, -1]
+let negativeArray = [-2, -3, -4, -10, 'bots', 'candles'];
 
+console.log( 'the new positive array is:', positivesOnly( exampleArray ) );
+console.log( 'this array should be empty:', positivesOnly( negativeArray ) );
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
+
+//Taken from codewars.com
+//Vowel Count
+// DESCRIPTION:
+// Return the number (count) of vowels in the given string.
+// We will consider a, e, i, o, u as vowels for this Kata (but not y).
+// The input string will only consist of lower case letters and/or spaces.
+
