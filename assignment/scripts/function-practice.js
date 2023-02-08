@@ -109,11 +109,20 @@ console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
 // 9. Function to return the sum of all numbers in an array
-function sumAll( ) {
+function sumAll( array ) {
   let sum = 0
   // TODO: loop to add items
+  for( number of array ) {
+    sum += number;
+  }
   return sum;
 }
+let arrayOfNumbers = [12, 90, 30, 55, 32, 11, 2];
+let otherArrayOfNumbers = [33, 11, 22, 44, 55, 90];
+
+console.log( sumAll( arrayOfNumbers ));
+console.log( sumAll( otherArrayOfNumbers ));
+
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
