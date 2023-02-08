@@ -139,8 +139,8 @@ function positivesOnly( array ) {
 let exampleArray = [2, 3, 9, 'apple', false, 4, 5, 6, -3, -2, -1]
 let negativeArray = [-2, -3, -4, -10, 'bots', 'candles'];
 
-console.log( 'the new positive array is:', positivesOnly( exampleArray ) );
-console.log( 'this array should be empty:', positivesOnly( negativeArray ) );
+console.log( 'this is the old array:', exampleArray, 'the new positive array is:', positivesOnly( exampleArray ) );
+console.log( 'this is the old array:', negativeArray, 'the new positive array is:', positivesOnly( negativeArray ) );
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
@@ -154,3 +154,24 @@ console.log( 'this array should be empty:', positivesOnly( negativeArray ) );
 // We will consider a, e, i, o, u as vowels for this Kata (but not y).
 // The input string will only consist of lower case letters and/or spaces.
 
+function vowelsOnly ( string ) {
+  let numberOfVowels = 0;
+  for( char of string ) {
+    if( char === 'a') {
+      numberOfVowels++
+    } else if (char === 'e') {
+      numberOfVowels++
+    } else if (char === 'i') {
+      numberOfVowels++
+    } else if (char === 'o') {
+      numberOfVowels++
+    } else if (char === 'u') {
+      numberOfVowels++
+    }
+  }
+  return numberOfVowels;
+}
+
+console.log( vowelsOnly( 'abracadabra' ) );
+console.log( vowelsOnly( 'this is a test phrase to see how many vowels there are' ) );
+console.log( vowelsOnly( 'bbccdd' ) );
