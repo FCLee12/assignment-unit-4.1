@@ -72,8 +72,24 @@ console.log( 'This should say undefined because this array is empty', getLast( a
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find( value, array ){
-  
+  let matchFound;
+  for ( item of array ) {
+    if( item === value ) {
+      matchFound = true;
+      break
+    } else {
+      matchFound = false;
+    }
+  }
+  console.log( matchFound );
+  return matchFound
 }
+let arrayWithMatches = [3, 4, 5, 6, 7, 8, 9, 10];
+let arrayWithoutMatches = ['apple', 'bugs', 'summer', 'sun', 'beaches'];
+
+console.log('this should say true', find( 8, arrayWithMatches ));
+console.log('this should say false', find( 'snow', arrayWithMatches ));
+
 
 // ----------------------
 // Stretch Goals
