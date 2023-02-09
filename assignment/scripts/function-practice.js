@@ -73,7 +73,7 @@ console.log( 'This should say undefined because this array is empty', getLast( a
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find( value, array ){
   let matchFound;
-  for ( item of array ) {
+  for ( let item of array ) {
     if( item === value ) {
       matchFound = true;
       break
@@ -112,7 +112,7 @@ console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 function sumAll( array ) {
   let sum = 0
   // TODO: loop to add items
-  for( number of array ) {
+  for( let number of array ) {
     sum += number;
   }
   return sum;
@@ -129,7 +129,7 @@ console.log( sumAll( otherArrayOfNumbers ));
 //     return an empty array. Note: The input array should not change.
 function positivesOnly( array ) {
   let newArray = [];
-  for( item of array ) {
+  for( let item of array ) {
     if( item > 0 ) {
       newArray.push(item);
     }
@@ -156,7 +156,7 @@ console.log( 'this is the old array:', negativeArray, 'the new positive array is
 
 function vowelsOnly ( string ) {
   let numberOfVowels = 0;
-  for( char of string ) {
+  for( let char of string ) {
     if( char === 'a') {
       numberOfVowels++
     } else if (char === 'e') {
